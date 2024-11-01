@@ -4,6 +4,9 @@ troco = pago - conta
 troco_variavel = troco
 
 #Calculando quantas cédulas e moeda de cada denominação
+cedula200 = troco_variavel // 200
+troco_variavel = troco_variavel - (cedula200 * 200)
+
 cedula100 = troco_variavel // 100
 troco_variavel = troco_variavel - (cedula100 * 100)
 
@@ -24,7 +27,10 @@ troco_variavel = troco_variavel - (cedula2 * 2)
 
 moeda1 = troco_variavel
 
+print()
 print("Troco: R$", troco)
+print()
+print("Cédula R$ 200:", cedula200)
 print("Cédula R$ 100:", cedula100)
 print("Cédula R$ 50: ", cedula50)
 print("Cédula R$ 20: ", cedula20)
