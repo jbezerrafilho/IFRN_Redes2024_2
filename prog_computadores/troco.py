@@ -24,7 +24,7 @@ troco_variavel = troco_variavel - (cedula2 * 2)
 
 moeda1 = troco_variavel
 
-print("Troco: ", troco)
+print("Troco: R$", troco)
 print("Cédula R$ 100:", cedula100)
 print("Cédula R$ 50: ", cedula50)
 print("Cédula R$ 20: ", cedula20)
