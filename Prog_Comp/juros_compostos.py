@@ -4,7 +4,7 @@ capital = float(input())
 print("Qual o valor da taxa de juros?")
 taxa = float(input())
 
-print("Qual o tempo de aplicaçãio?")
+print("Qual o tempo de aplicação?")
 tempo = int(input())
 
 montante = capital * (1 + (taxa / 100)) ** tempo
