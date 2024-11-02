@@ -1,29 +1,29 @@
 conta = int(input('Qual o valor da conta? '))
-pago =int(input('Quanto o cliente pagou? '))
+pago = int(input('Quanto o cliente pagou? '))
 troco = pago - conta
 troco_variavel = troco
 
 #Calculando quantas cédulas e moeda de cada denominação
 cedula200 = troco_variavel // 200
-troco_variavel = troco_variavel - (cedula200 * 200)
+troco_variavel = troco_variavel % 200
 
 cedula100 = troco_variavel // 100
-troco_variavel = troco_variavel - (cedula100 * 100)
+troco_variavel = troco_variavel % 100
 
 cedula50 = troco_variavel // 50
-troco_variavel = troco_variavel - (cedula50 * 50)
+troco_variavel = troco_variavel % 50
 
 cedula20 = troco_variavel // 20
-troco_variavel = troco_variavel - (cedula20 * 20)
+troco_variavel = troco_variavel % 20
 
 cedula10 = troco_variavel // 10
-troco_variavel = troco_variavel - (cedula10 * 10)
+troco_variavel = troco_variavel % 10
 
 cedula5 = troco_variavel // 5
-troco_variavel = troco_variavel - (cedula5 * 5)
+troco_variavel = troco_variavel % 5
 
 cedula2 = troco_variavel // 2
-troco_variavel = troco_variavel - (cedula2 * 2)
+troco_variavel = troco_variavel % 2
 
 moeda1 = troco_variavel
 
