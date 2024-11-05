@@ -9,4 +9,5 @@ tempo = int(input())
 
 montante = capital * (1 + (taxa / 100)) ** tempo
 montante = round(montante, 2)
-print(" O valor de R$ ", capital, " aplicado à taxa de ", taxa, " renderá o montante de R$ ", montante)
+print(" O valor de R$ ", capital, " aplicado à taxa de ", 
+       taxa, "  +   renderá o montante de R$ ", montante)
