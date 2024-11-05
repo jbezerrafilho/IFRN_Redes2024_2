@@ -10,7 +10,6 @@ montante = float(input('Valor do montante? '))
 taxa = float(input('Valor da taxa? ')) / 100
 
 #Isolando t na fórmula de juros compostos, teremos:
-tempo = int(round((math.log(montante/capital)/math.log(1 + taxa)), 1))
+tempo = int(math.ceil(((math.log(montante/capital)/math.log(1 + taxa)))))
 
 print('O tempo será de', tempo, 'meses.')
-
