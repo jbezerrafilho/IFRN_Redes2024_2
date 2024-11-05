@@ -1,3 +1,4 @@
+Autor: José Bezerra
 import math
 
 """
