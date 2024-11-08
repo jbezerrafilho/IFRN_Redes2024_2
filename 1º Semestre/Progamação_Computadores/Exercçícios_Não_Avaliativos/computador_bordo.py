@@ -20,7 +20,7 @@ custo_por_km = (consumo_litros * preco_gasolina) / distancia
 custo_da_viagem = (custo_por_km * distancia)
 
 print(f'Dados de bordo: \n\
-      Velocidade média: {velocidade_media:.2f} \n\
+      Velocidade média: {velocidade_media:.2f} Km \n\
       Tempo de viagem: {tempo} horas. \n\
       Desempenho: {desempenho:.2f} Km/l \n\
       Custo por Km: {custo_por_km:.2f} R$/Km \n\
