@@ -1,11 +1,29 @@
-numero = int(input("Digite um numero de 04 dígitos))
+# Calculando se um número é decrescente
 
-#Capturando o número mais significativo
-a = numero // 1000 
-numero = numero % 1000
+try: 
+    numero = int(input("Digite um numero de 04 dígitos: "))
+    num_inicial = numero
 
-b = numero // 100
-numero = numero % 100
+    #Capturando o número mais significativo
+    a = numero // 1000 
+    numero %= 1000
 
-c = numero // 10
-numero = numero % 10
+    b = numero // 100
+    numero %= 100
+
+    c = numero // 10
+    numero %= 10
+
+    d = numero // 1
+
+    msg = "é decrescente!"
+    if a >= b:
+        if b >= c:
+            if c >= d:
+                print(num_inicial, msg)
+    else:
+        print(num_inicial, 'não', msg)
+
+
+except ValueError as e:
+    print('Insira um número válido! ')
