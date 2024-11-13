@@ -11,5 +11,3 @@ if a == b :
     print("palíndromo")
 else: 
     print("Não é palíndromo!!")
-
-123
