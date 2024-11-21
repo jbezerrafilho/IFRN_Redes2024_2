@@ -7,12 +7,14 @@ try:
     inicio = 1
     fim = 100
 
-    # Right refere-se ao acerto da tentativa do usuário
+    # Valida se o usuário acertou a tentativa
     right = False
+
+    # Incrementa a quantidade de tentativas
     qtd_tentativas = 0
     
     
-    #Tentativa 1
+    # Tentativa 1
     if not right:
         msg = f'Qual o número sorteado no intervalo de {inicio} a {fim}? '
         tentativa = int(input(msg))
@@ -25,7 +27,7 @@ try:
         elif tentativa > numero_sorteado:
             fim = tentativa - 1
 
-    #Tentativa 2
+    # Tentativa 2
     if not right:
         msg = f'Qual o número sorteado no intervalo de {inicio} a {fim}? '
         tentativa = int(input(msg))
@@ -38,7 +40,7 @@ try:
         elif tentativa > numero_sorteado:
             fim = tentativa - 1
 
-    #Tentativa 3    
+    # Tentativa 3    
     if not right:
         msg = f'Qual o número sorteado no intervalo de {inicio} a {fim}? '
         tentativa = int(input(msg))
@@ -51,7 +53,7 @@ try:
         elif tentativa > numero_sorteado:
             fim = tentativa - 1
 
-    #Tentativa 4    
+    # Tentativa 4    
     if not right:
         msg = f'Qual o número sorteado no intervalo de {inicio} a {fim}? '
         tentativa = int(input(msg))
@@ -63,6 +65,8 @@ try:
             inicio = tentativa + 1
         elif tentativa > numero_sorteado:
             fim = tentativa - 1
+
+    # Valida o término das tentativas       
     if qtd_tentativas == 4:
         print('Tentativas esgotadas!')
         
