@@ -1,3 +1,6 @@
+# Developed by J.Bezerra
+# Novembro de 2024
+
 import random
 
 try:

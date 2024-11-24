@@ -1,44 +1,43 @@
+# Developed by J.Bezerra
+# Novembro de 2024
+
 try:
     print()
-    print('Organização didática do IFRN')
-    print('Seção II')
-    print('Cálculo de média em Disciplinas!')
-    print()
+    print('Desempenho Acadêmico no IFRN')
+    print('Cálculo de média em Disciplinas!\n')
 
-    msg = 'Digite a nota: '
+    msg = 'Digite a nota entre 0 e 100: '
     situacao = ''
     n1 = float(input(msg))
     n2 = float(input(msg))
-    naf = 0 # nota de avaliação final, caso necessário
-
+    prova_final = False
+    
     # Média da Disciplina
     md = (2 * n1 + 3 * n2) / 5
     print('A média da disciplina foi: ', md)
     if md >= 60:
         situacao = 'Aprovado'
         print(situacao)
-
     elif 20 <= md < 60:
-        print('Em prova final')
-        naf = float(input(msg))
-
-        #Três formas de calcular a média final
-        #A mais vantajosa será considerada
-        mfd = (md + naf) / 2
-        mfd1 = (2 * naf + 3 * n2) / 5
-        mfd2 = (2 * n1 + 3 * naf) / 5
-        if mfd >= 60 or mfd1 >= 60 or mfd2 >= 60:
-            situacao = 'Aprovado'
-            print('Aprovado')
-        else:
-            situacao = 'Reprovado'
-            print(situacao)
+        situacao = 'Em prova final'
+        print(situacao)
+        prova_final = True    
     else:
         situacao = 'Reprovado'
         print(situacao)
-
-    #Se o estudante não for reprovado por falta 
-    #E tiver média superior a 20, poderá fazer avaliação final
+    
+    #Três formas de calcular a média final
+    if prova_final:
+        naf = float(input(msg)) #nota de avaliação final
+        mfd = (md + naf) / 2 #1
+        mfd1 = (2 * naf + 3 * n2) / 5 #2
+        mfd2 = (2 * n1 + 3 * naf) / 5 #3
+        if mfd >= 60 or mfd1 >= 60 or mfd2 >= 60:
+            situacao = 'Aprovado'
+            print(situacao)
+        else:
+            situacao = 'Reprovado'
+            print(situacao)
 
 except ValueError as e:
     print(e)

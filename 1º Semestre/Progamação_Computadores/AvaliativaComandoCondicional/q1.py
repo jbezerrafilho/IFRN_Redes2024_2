@@ -1,4 +1,5 @@
-#Programa feito por José Bezerra
+# Developed by J.Bezerra
+# Novembro de 2024
 
 try:
     print('Calculadora de IMC')

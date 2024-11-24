@@ -1,4 +1,5 @@
-# Ano Bissexto
+# Developed by J.Bezerra
+# Novembro de 2024
 
 try:
     ano = int(input('Informe o ano para saber se é bissexto: '))
