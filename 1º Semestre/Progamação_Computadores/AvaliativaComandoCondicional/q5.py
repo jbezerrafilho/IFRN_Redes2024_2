@@ -6,9 +6,9 @@ try:
     dia = int(input('Informe o dia: '))
     mes = int(input('Informe o mês: '))
     ano = int(input('Informe o ano: '))
-    dia_juliano = 0
+    dia_juliano = dia
     data_valida = False
-    eh_bissexto = False
+    bissexto = False
     ano_valido = True
 
     # Validando se o ano é válido e bissexto
@@ -16,7 +16,7 @@ try:
         ano_valido = False
         print('Ano inválido!\n')
     elif (ano % 4 == 0 and ano % 100 != 0) or (ano % 400 == 0):
-        eh_bissexto = True
+        bissexto = True
 
 
     if ano_valido:
@@ -31,7 +31,7 @@ try:
                 data_valida = True   
             else:
                 print('Dia inválido')
-        elif mes == 2 and eh_bissexto:
+        elif mes == 2 and bissexto:
             if dia >= 1 and dia <= 29:
                 data_valida = True
         elif mes == 2: 
@@ -44,56 +44,30 @@ try:
         
 
     # Calculando o dia Juliano
-    if data_valida or eh_bissexto:
-        if mes == 1:
-            dia_juliano = dia
-        if mes == 2 :
-            dia_juliano = 31 + dia
+    if data_valida:
+        if mes > 1:
+            dia_juliano += 31 # Janeiro
+        if mes > 2 :
+            dia_juliano += 29 if bissexto else 28 # Fevereiro
+        if mes > 3:
+            dia_juliano += 31 # Março
+        if mes > 4:
+            dia_juliano += 30 # Abril
+        if mes > 5:
+            dia_juliano += 31 # Maio
+        if mes > 6:
+            dia_juliano += 30 # Junho
+        if mes > 7:
+            dia_juliano += 31 # Julho
+        if mes > 8: 
+            dia_juliano += 31 # Agosto
+        if mes > 9:
+            dia_juliano += 30 # Setembro
+        if mes > 10:
+            dia_juliano += 31 # Outubro
+        if mes > 11:
+            dia_juliano += 30 # Novembro
 
-    if data_valida and eh_bissexto:
-        if mes == 3:
-            dia_juliano = 60 + dia
-        if mes == 4:
-            dia_juliano = 91 + dia
-        if mes == 5:
-            dia_juliano = 121 + dia
-        if mes == 6:
-            dia_juliano = 152 + dia
-        if mes == 7:
-            dia_juliano = 182 + dia
-        if mes == 8: 
-            dia_juliano = 213 + dia
-        if mes == 9:
-            dia_juliano = 244 + dia
-        if mes == 10:
-            dia_juliano = 274 + dia
-        if mes == 11:
-            dia_juliano = 305 + dia
-        if mes == 12:
-            dia_juliano = 335 + dia
-
-    if data_valida and not eh_bissexto:
-        if mes == 3:
-            dia_juliano = 59 + dia
-        if mes == 4:
-            dia_juliano = 90 + dia
-        if mes == 5:
-            dia_juliano = 120 + dia
-        if mes == 6:
-            dia_juliano = 151 + dia
-        if mes == 7:
-            dia_juliano = 181 + dia
-        if mes == 8: 
-            dia_juliano = 212 + dia
-        if mes == 9:
-            dia_juliano = 243 + dia
-        if mes == 10:
-            dia_juliano = 273 + dia
-        if mes == 11:
-            dia_juliano = 304 + dia
-        if mes == 12:
-            dia_juliano = 334 + dia
-            
     print(f'Seu dia juliano é {dia_juliano}.') if data_valida else None
 
 except ValueError as e:
