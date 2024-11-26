@@ -1,4 +1,4 @@
-# Developed by J.Bezerra
+# Developed by J.Bezerra e Eduarda
 # Novembro de 2024
 
 import random
